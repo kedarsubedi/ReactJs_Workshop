@@ -1,19 +1,16 @@
 import { useState } from "react";
 
-const ProductQunt = () => {
+const ProductQunt = ({price}) => {
     const [quantity, setQunatiy] = useState(1);
-    const price = '';
 
     const handPlusClick = () =>{
         setQunatiy(quantity + 1);
     };
     const handlMinusClick = () => {
-        if(quantity > 1){
-            setQunatiy(quantity - 1);
-        }
+        quantity > 1 ? setQunatiy(quantity - 1): '';
     };
-    const getTotalPrice = (quantity) => {
-        return `${quantity} * 1200 = Rs. ${quantity * 1200}`;
+    const getTotalPrice = () => {
+        return `${quantity} * ${price} = Rs. ${quantity * price}`;
       };
     return (
         <>
@@ -23,7 +20,7 @@ const ProductQunt = () => {
                 <span className="quantity-value">{quantity}</span>
                 <button className='plus-button' onClick={handPlusClick}>+</button>
             </div>
-            <p className='total-price'>{getTotalPrice(quantity, price)}</p>
+            <p className='total-price'>{getTotalPrice()}</p>
         </>
     );
 };

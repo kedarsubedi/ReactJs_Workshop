@@ -6,7 +6,7 @@ import ProductPage from './components/ProductPage';
 
 const App = () => {
   return (
-    <ProductPage title='Logitech K380' category='Keyboard' picture={productpic}/>
+    <ProductPage title='Logitech K380' category='Keyboard' picture={productpic} price='1200'/>
   );
 };
 
