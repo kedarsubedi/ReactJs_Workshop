@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ProductQunt = () => {
     const [quantity, setQunatiy] = useState(1);
-    const price = ''
+    const price = '';
 
     const handPlusClick = () =>{
         setQunatiy(quantity + 1);
